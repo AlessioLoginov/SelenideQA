@@ -40,7 +40,7 @@ public class TestCardDelivery {
         $("[data-test-id='city'] input").setValue(myCity.substring(0, 2));
         $$(".menu-item__control").findBy(text(myCity)).click();
         $("[data-test-id='date'] input").click();
-        if (!getNewDate(3, "MM").equals(getNewDate(7, "MM"))) {
+        if (!getNewDate(0, "MM").equals(getNewDate(7, "MM"))) {
             $("[data-step='1']").click();
         }
         $$(".calendar__day").findBy(text(getNewDate(7, "d"))).click();
